@@ -45,27 +45,17 @@ function setPlayer() {
 
 
 
-/*function getRandomArbitrary(min, max) {
-   return Math.floor(Math.random() * (max - min) + min);
-} */
+
 
 function f(id) {
     document.getElementById(id).innerHTML = currentPlayer;
     box[id] = currentPlayer;
     checkWinner();
-    /* checkWinner(() => {
-         if (playerType == "Computer") {
-             console.log(currentPlayer)
-             document.getElementById(getRandomArbitrary(0, 9)).innerHTML = currentPlayer;
-             box[id] = currentPlayer;
-             checkWinner();
-         }
-     }); */
 
 }
 
 
-function checkWinner() {         //callback
+function checkWinner() {
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -77,8 +67,7 @@ function checkWinner() {         //callback
                 for (var i = 0; i < box.length; i++) {
                     document.getElementById(i.toString()).removeAttribute("onclick");
                 }
-
-            } else {
+            }else {
                 currentPlayer = ('X' == currentPlayer) ? 'O' : 'X';
 
             }
@@ -92,6 +81,8 @@ function checkWinner() {         //callback
     console.log(body)
     xhttp.send(body);
 }
+
+
 
 
 

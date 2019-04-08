@@ -1,12 +1,19 @@
 package ro.siit.model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import ro.siit.entity.Xo;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class DatabaseManager {
 
     private Connection connection;
+
+    public Connection getConnection(){
+        return connection;
+    }
 
     private static DatabaseManager instance;
 
@@ -50,4 +57,35 @@ public class DatabaseManager {
         }
         return null;
     }
+
+    public List<String> getLastThreeMatches() {
+        List<String> getMatches = new ArrayList<>();
+
+        try (Statement statement = connection.createStatement()) {
+            ResultSet matches = statement.executeQuery("SELECT board FROM xo ORDER BY id ASC limit 3");
+            while(matches.next()){
+                getMatches.add(matches.getString("board"));
+            }
+        } catch (SQLException sqlEx){
+            System.out.println(sqlEx);
+        }
+
+        return getMatches;
+
+    }
+
+
+    public void add(String matrix){
+        try {
+            PreparedStatement insertStatement = connection.prepareStatement("INSERT INTO xo VALUES (?, ?)");
+            insertStatement.setObject(1,UUID.randomUUID());
+            insertStatement.setString(2, matrix);
+            insertStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 }

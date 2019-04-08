@@ -24,10 +24,21 @@ public class ServletHuman extends HttpServlet {
         System.out.println(matrix);
         Xo xo = new Xo(matrix);
 
-        PrintWriter out = resp.getWriter();
-        out.println("{\"win\": " + xo.winningCondition()   + "}");
 
+      PrintWriter out = resp.getWriter();
+         try {
+            if(xo.winningCondition()){
+                databaseManager.add(matrix);
+            }
+        } catch (Exception e) {
+             e.printStackTrace();
+            out.println("{\"error\": " + e.toString() + "}");
+        }
+
+        out.println("{\"win\": " + xo.winningCondition()  + "}");
     }
+
+
 }
 
 

@@ -55,7 +55,8 @@
         <div class ="history"></br></br>
 
             <button type="button" class="button-bar" id="reset" onclick="resetGame()">Reset game</button></br></br>
-            <button type="button" class="button-bar" id="history" onclick="">History</button>
+
+            <a href="history.jsp">History</a>
 
 
         </div>

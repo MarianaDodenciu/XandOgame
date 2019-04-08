@@ -5,6 +5,7 @@ import java.util.UUID;
 public class Xo {
 
     private char[][] board = new char[3][3];
+    private UUID id;
 
 
     public Xo(String boardPosition){
@@ -25,7 +26,16 @@ public class Xo {
         }
     }
 
-
+    public boolean isBoardFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == 'x' || board[i][j] =='o') {
+                     return true;
+                }
+            }
+        }
+        return false;
+    }
 
     public boolean checkAnyThreeValues(char c1, char c2, char c3) {
         return ((c1 != '-') && (c1 == c2) && (c2 == c3));
@@ -61,5 +71,19 @@ public class Xo {
         return false;
     }
 
+    public char[][] getBoard() {
+        return board;
+    }
 
+    public void setBoard(char[][] board) {
+        this.board = board;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 }
