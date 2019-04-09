@@ -1,5 +1,4 @@
 var currentPlayer = 'X';
-var playerType = 'Human';
 var box = ['', '', '', '', '', '', '', '', ''];
 
 
@@ -16,18 +15,6 @@ function resetGame() {
     currentPlayer = 'X';
 }
 
-
-function setPlayerType() {
-    var human = document.getElementById("Human");
-    var computer = document.getElementById("Computer");
-    if (human.checked) {
-        playerType = 'Human'
-    }
-    if (computer.checked) {
-        playerType = 'Computer'
-    }
-
-}
 
 
 function setPlayer() {

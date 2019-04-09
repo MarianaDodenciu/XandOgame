@@ -20,8 +20,6 @@
             <h3>Select player</h3></br>
             <form action="#">
 
-                <input class="button" type="radio" name="selectPlayer" id="Human" checked="checked"  onclick="setPlayerType()">Human
-                <input class="button" type="radio" name="selectPlayer" id="Computer"  onclick="setPlayerType()"> Computer</br></br>
                 <input class="button" type="radio" name="startPlayer" id="xPlayer" checked="checked" value="X" onclick="setPlayer()"> X Player
                 <input class="button" type="radio" name="startPlayer" id="oPlayer" value="O" onclick="setPlayer()"> O Player
             </form>
