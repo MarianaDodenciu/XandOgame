@@ -6,12 +6,6 @@ window.onload = () => {
 
 
 
-//var board = ['', '', '', '', '', '', '', '', ''];
-//var board2 =['', '', '', '', '', '', '', '', ''];
-//var board3 =['', '', '', '', '', '', '', '', ''];
-
-
-
 function getLastThreeWinnngMatches() {
 
     var xhttp = new XMLHttpRequest();
@@ -33,31 +27,27 @@ function getLastThreeWinnngMatches() {
                    str3[i] = str3[i].replace(/^"(.*)"$/, '$1');}
 
            for(var i=0; i < 9;i++) {
-               if (str1[i] == "") {
+               if (str1[i] == "")  {
                     document.getElementById(i.toString()).innerHTML = '\xa0';
                } else {
                    document.getElementById(i.toString()).innerHTML = str1[i];
                }
            }
            for(var i=0; i < 9; i++) {
-               if (str2[i] == "") {
+               if (str2[i] == "")  {
                    document.getElementById((i + 9).toString()).innerHTML = '\xa0';
                } else {
                    document.getElementById((i + 9).toString()).innerHTML = str2[i];
                }
            }
            for(var i=0; i < 9; i++) {
-               if (str3[i] == "") {
+               if (str3[i] == "")  {
                    document.getElementById((i + 18).toString()).innerHTML = '\xa0';
                } else {
                    document.getElementById((i + 18).toString()).innerHTML = str3[i];
                }
            }
 
-
-            console.log(str1);
-            console.log(str2);
-            console.log(str3);
 
         }
     };

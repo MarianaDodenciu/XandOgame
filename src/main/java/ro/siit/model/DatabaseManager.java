@@ -1,7 +1,5 @@
 package ro.siit.model;
 
-import ro.siit.entity.Xo;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -18,13 +18,11 @@
     <!-- header section -->
     <div class="header">
         <h1> The last 3 winning matches</h1>
-    </div>
-    <div id="Win-div"></div>
+    </div></br>
 
-    <div><a href="/GameTestingXandO_war_exploded/">Go back to game</a></div>
-
-
+    <div><a href="/GameTestingXandO_war_exploded/">Go back to game</a></div></br></br>
     <!-- board container-->
+
     <div class="containerBoard">
         <div class="board" >           <!-- first board -->
             <div class="row">
@@ -79,7 +77,9 @@
                 <div id ="26" class="square" >&nbsp;</div>
             </div>
         </div>
-    </div>
+    </div></br></br>
+
+
 </div>
 </body>
 </html>

@@ -10,8 +10,9 @@
     <div class="container">
         <!-- header section -->
         <div class="header">
-            <h1> X si O</h1>
-        </div>
+            <h1> X and O</h1>
+        </div></br></br>
+
         <div id="Win-div"></div>
 
         <!-- controls section : checkboxes-->
@@ -20,8 +21,8 @@
             <h3>Select player</h3></br>
             <form action="#">
 
-                <input class="button" type="radio" name="startPlayer" id="xPlayer" checked="checked" value="X" onclick="setPlayer()"> X Player
-                <input class="button" type="radio" name="startPlayer" id="oPlayer" value="O" onclick="setPlayer()"> O Player
+                <input class="button b1" type="radio" name="startPlayer" id="xPlayer" checked="checked" value="X" onclick="setPlayer()"> X Player
+                <input class="button b1" type="radio" name="startPlayer" id="oPlayer" value="O" onclick="setPlayer()"> O Player
             </form>
 
         </div>
@@ -52,9 +53,9 @@
 
         <div class ="history"></br></br>
 
-            <button type="button" class="button-bar" id="reset" onclick="resetGame()">Reset game</button></br></br>
+            <button type="button" class="button" id="reset" onclick="resetGame()">Reset game</button></br></br>
 
-            <a href="history.jsp">History</a>
+            <a href="history.jsp" class="button">History</a>
 
 
         </div>

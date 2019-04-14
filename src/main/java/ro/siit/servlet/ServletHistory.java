@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-@WebServlet("/ServletHistory")                               //Server
+@WebServlet("/ServletHistory")
 public class ServletHistory extends HttpServlet{
 
     private DatabaseManager databaseManager = DatabaseManager.getInstance();
