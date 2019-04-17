@@ -26,16 +26,6 @@ public class Xo {
         }
     }
 
-    public boolean isBoardFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (board[i][j] == 'x' || board[i][j] =='o') {
-                     return true;
-                }
-            }
-        }
-        return false;
-    }
 
     public boolean checkAnyThreeValues(char c1, char c2, char c3) {
         return ((c1 != '-') && (c1 == c2) && (c2 == c3));
